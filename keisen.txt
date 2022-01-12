@@ -1,0 +1,15 @@
+Sub DrawOutlineCell()
+    Dim rng As Range
+    Dim rngStr As String
+
+    Set rng = Range("A1").CurrentRegion
+
+
+    With rng.Borders
+        .LineStyle = xlContinuous
+        .Color = vbBlack
+        .Weight = xlThin
+    End With
+
+    rng.Columns.EntireColumn.AutoFit
+End Sub

@@ -1,0 +1,22 @@
+Sub Teisai()
+  Dim rng as Range
+  
+  Set rng = Columns("F:F")
+  rng.ColumnWidth = 100
+
+  with rng
+        .HorizontalAlignment = xlGeneral
+        .VerticalAlignment = xlCenter
+        .WrapText = True
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 0
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False    
+  end with
+
+  set rng = Columns("H:H")
+  rng.Style = "Currency [0]"
+
+End Sub
